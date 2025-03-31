@@ -1,6 +1,6 @@
 <?php 
-$action = new Genre("Action", "Pieno di combattimenti, inseguimenti e adrenalina");
-$comedy = new Genre("Comedy", "Divertente, spesso con situazioni esilaranti");
+$action = new Genre("Azione", "Pieno di combattimenti, inseguimenti e adrenalina");
+$comedy = new Genre("Commedia", "Divertente, spesso con situazioni esilaranti");
 
 $movies = [
   new Movie("Die Hard", "John McTiernan", 1988, "https://example.com/die-hard", "Un poliziotto deve salvare ostaggi in un grattacielo.", $action),
