@@ -4,12 +4,14 @@ class Movie {
   private $author;
   private $yearPublication;
   private $url;
+  private Genre $genre;
 
-  function __construct($title, $author,  $yearPublication, $url){
+  function __construct($title, $author,  $yearPublication, $url, Genre $genre){
     $this->title = $title;
     $this->author = $author;
     $this->yearPublication = $yearPublication;
     $this->url = $url;
+    $this->genre = $genre;
   }
 
   public function getTitle() {
@@ -43,6 +45,13 @@ class Movie {
   public function setUrl($url) {
     $this->url = $url;
   }
-}
 
+  public function getGenreName() {
+    return $this->genre->getName();
+  }
+
+  public function setGenre(Genre $genre) {
+    $this->genre = $genre;
+  }
+}
 ?>

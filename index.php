@@ -1,5 +1,6 @@
 <?php 
-require_once "./Models/movie.php"
+require_once "./Models/Genre.php";
+require_once "./Models/Movie.php";
 ?>
 
 <!DOCTYPE html>
