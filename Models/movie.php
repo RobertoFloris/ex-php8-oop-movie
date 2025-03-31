@@ -4,13 +4,17 @@ class Movie {
   private $author;
   private $yearPublication;
   private $url;
+  private $description;
   private Genre $genre;
 
-  function __construct($title, $author,  $yearPublication, $url, Genre $genre){
+  use HasRating;
+
+  function __construct($title, $author,  $yearPublication, $url, $description, Genre $genre){
     $this->title = $title;
     $this->author = $author;
     $this->yearPublication = $yearPublication;
     $this->url = $url;
+    $this->description = $description;
     $this->genre = $genre;
   }
 
@@ -46,12 +50,18 @@ class Movie {
     $this->url = $url;
   }
 
-  public function getGenreName() {
+  public function getDescription() {
+    return $this->description;
+  }
+
+  public function setDescription($description) {
+    $this->description = $description;
+  }
+
+  public function getGenreName(){
     return $this->genre->getName();
   }
 
-  public function setGenre(Genre $genre) {
-    $this->genre = $genre;
-  }
 }
+
 ?>

@@ -1,6 +1,14 @@
 <?php 
+require_once "./Traits/HasRating.php";
+
 require_once "./Models/Genre.php";
 require_once "./Models/Movie.php";
+
+require_once "./Db/db.php";
+
+$movies[0]->setRating("5");
+
+var_dump($movies);
 ?>
 
 <!DOCTYPE html>
